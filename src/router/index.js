@@ -3,6 +3,7 @@ import Home from '../views/HomeView.vue'
 import About from '../views/AboutView.vue'
 import Tips from '../views/tips/TipsView.vue'
 import TipDetails from '../views/tips/TipDetailsView.vue'
+import NotFound from '../views/404.vue'
 
 const routes = [
   {
@@ -25,6 +26,14 @@ const routes = [
     name: 'tipDetails',
     component: TipDetails,
     props: true
+  },
+
+  // 404 page
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
+    
   }
 ]
 
